@@ -3,12 +3,17 @@ using Xunit;
 
 namespace RepasoPersona.Test
 {
-    public class UnitTest1
+    public class PersonaTest
     {
-        [Fact]
-        public void Test1()
+        public Persona Elkakas {get; set;}
+        
+        [fact]
+        public void Constructor()
         {
-
+            Elkakas = new Persona("Elkakas","Lopez",0);
+            assert.Equal("Elkakas", Elkakas.Nombre);
+            assert.Equal("Lopez", Elkakas.Apellido);
+            assert.Equal(0; Elkakas. Efectivo);
         }
     }
 }
