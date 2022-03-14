@@ -1,19 +1,29 @@
 using System;
 using Xunit;
+using RepasoPersona.core;
+
 
 namespace RepasoPersona.Test
 {
     public class PersonaTest
     {
-        public Persona Elkakas {get; set;}
-        
-        [fact]
+        Persona Elkakas {get; set;}
+        public PersonaTest() => Elkakas = new Persona ("Elkakas", "Lopez", 0);
+
+        [Fact]
         public void Constructor()
         {
-            Elkakas = new Persona("Elkakas","Lopez",0);
-            assert.Equal("Elkakas", Elkakas.Nombre);
-            assert.Equal("Lopez", Elkakas.Apellido);
-            assert.Equal(0; Elkakas. Efectivo);
+            Assert.Equal("Elkakas", Elkakas.Nombre);
+            Assert.Equal("Lopez", Elkakas.Apellido);
+            Assert.Equal(0, Elkakas. Efectivo);
+        }
+
+        [Fact]
+        public void AcreditarPositivo()
+        {
+            double esporado = 1000;
+            Elkakas.acreditar(1000);
+            Assert.Equal(esporado, Elkakas.Efectivo, 3);
         }
     }
 }

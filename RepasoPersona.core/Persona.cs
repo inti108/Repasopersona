@@ -10,15 +10,13 @@ namespace RepasoPersona.core
 
         public Persona () => Efectivo = 0;
 
-        public Persona (string Nombre, string Apellido, double Efecto)
+        public Persona (string nombre, string apellido, double efectivo)
         {
-            Nombre = Nombre;
-            Apellido = Apellido;
-            Efectivo = Efectivo;
+            Nombre = nombre;
+            Apellido = apellido;
+            Efectivo = efectivo;
         }
         
-        public class Persona
-        {
             public void debitar(double monto){
 
                 if(Efectivo <= 0)
@@ -44,4 +42,4 @@ namespace RepasoPersona.core
 
         
     }
-}
+
